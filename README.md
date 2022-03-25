@@ -1,5 +1,5 @@
-# s3-upgrade-index
-Upload github action for sending files to s3
+# s3-upload-file-raw
+Action for uploading file to S3 with the support of raw parameters.
 
 
 ## Usage
@@ -19,7 +19,7 @@ jobs:
    - uses: actions/checkout@master
    
    - name: Upload file to bucket
-   uses: coinc-dev/s3-upgrade-index@1.0.2
+   uses: coinc-dev/s3-upload-file-raw@master
    env:
     FILE: ./lambda.zip
     AWS_REGION: 'us-east-1'
@@ -27,5 +27,5 @@ jobs:
     S3_KEY: ${{ secrets.S3_KEY }}
     AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-    CFG: [COMMANDLINE CONFIG]
+    CFG: [RAW PARAMETERS CONFIG]
 ```
